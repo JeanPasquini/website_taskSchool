@@ -8,127 +8,144 @@
     <link rel="stylesheet" href="../css/workspace.css">
 </head>
 <body>
-    <div class="container">
-        <div class="search">
-            <input type="text" class="form-control">
-            <button type="button" class="btn btn-primary btn_add_task" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+</button>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create Task</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <!-- Text -->
-                        <label for="title">Title:</label>
-                        <input type="text" class="form-control" placeholder="">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Barra lateral -->
+            <div id="sidebar" class="col-md-3 col-lg-2 bg-dark sidebar">
+                <!-- Conteúdo da barra lateral -->
+                <h4>Person name</h4>
+                <h5>Rule</h5><br><br>
 
-                        <label for="subject">Subject:</label>
-                        <input type="text" class="form-control" placeholder="">
-
-                        <label for="comment">About:</label>
-                        <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                    </div>
+                <div class="">
+                    <p>All rights reserved</p>
                 </div>
             </div>
-        </div>
-
-
-
-        <div class="tasks">
-
-            <div class="container text-center">
-                <div class="row row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
-                  <div class="col">
-                        <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
+    
+            <!-- Conteúdo principal -->
+            <main class="col-md-9 ml-sm-auto col-lg-10 px-4 container">
+                <button id="toggleButton">→</button>
+                <div class="search">
+                    <input type="text" class="form-control">
+                    <button type="button" class="btn btn-primary btn_add_task" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+</button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Create Task</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Text -->
+                                <label for="title">Title:</label>
+                                <input type="text" class="form-control" placeholder="">
+    
+                                <label for="subject">Subject:</label>
+                                <input type="text" class="form-control" placeholder="">
+    
+                                <label for="comment">About:</label>
+                                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-              </div>
-            
-            <!--
-                <?php
-                    $sql = "SELECT id, name, email FROM your_table_name";
-                    $result = $conn->query($sql);
+    
+                <div class="tasks">
+                    <div class="portfolio-container container">
+                        <div class="col image-container fade-in">
+                            <label for="title" class="cardtext">Title</label>
+                            <label for="subject" class="cardtext">Subject</label>
+                            <label for="text" class="cardtext">Text...</label>
 
-                    // Check if there are rows in the result
-                    if ($result->num_rows > 0) {
-                        echo "<table>";
+                                        <div class="button-container">
+                                            <button class="delete-button">Delete</button>
+                                            <button class="change-button" data-bs-toggle="modal" data-bs-target="#staticEdit">Change</button>
+    
+                                            <div class="modal fade" id="staticEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Task</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <!-- Text -->
+                                                            <label for="title">Title</label>
+                                                            <input type="text" class="form-control" placeholder="">
+    
+                                                            <label for="subject">Subject</label>
+                                                            <input type="text" class="form-control" placeholder="">
+    
+                                                            <label for="comment">About</label>
+                                                            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- 
+                        <?php
+                                $sql = "SELECT id, name, email FROM your_table_name";
+                                $result = $conn->query($sql);
 
-                        // Output data of each row
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<tr>";
+                                // Check if there are rows in the result
+                                if ($result->num_rows > 0) {
+                                    echo "<table>";
 
-                            echo "</tr>";
-                        }
-                        echo "</table>";
-                    } else {
-                        echo "No results found.";
-                    }
-                ?>
+                                    // Output data of each row
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<tr>";
+
+                                        echo "</tr>";
+                                    }
+                                    echo "</table>";
+                                } else {
+                                    echo "No results found.";
+                                }
+                            ?>
 
 
-                    //echo "<td>" . $row["id"] . "</td>";
-                    //echo "<td>" . $row["name"] . "</td>";
-                    //echo "<td>" . $row["email"] . "</td>";
-            -->
+                                //echo "<td>" . $row["id"] . "</td>";
+                                //echo "<td>" . $row["name"] . "</td>";
+                                //echo "<td>" . $row["email"] . "</td>"; 
+                    -->
+                </div>
+            </main>
         </div>
     </div>
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Inclua os links para os arquivos JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript personalizado para ocultar/mostrar a barra lateral
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                sidebar.style.display = 'block';
+            } else {
+                sidebar.style.display = 'none';
+            }
+        });
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

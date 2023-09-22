@@ -1,4 +1,5 @@
 body{
+    min-height: 100vh;
 }
 
 *{
@@ -22,9 +23,154 @@ body{
 
     background-color: rgba(128, 128, 128, 0.178);
     width: 100%;
-    border-radius: 2%;
+    border-radius: 5px;
 }
 
 .btn_add_task{
     margin: 0 0 0 10px;
+    height: 40px;
+    width: 40px;
+}
+.button-container{
+    margin: 10px;
+}
+
+.change-button {
+    background-color: #4CAF50;
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.change-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f; 
+}
+
+  .image-container {
+    padding: 2px 2px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: white;
+    
+    transition: 0.5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.5rem;
+  }
+
+  @media screen and (max-width: 992px) {
+
+    .portfolio-container{
+        grid-template-columns: repeat(2,1fr);
+      }
+  }
+
+.sidenav {
+    height: 100%; 
+    width: 160px; 
+    position: fixed;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 160px; 
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  #sidebar {
+    background-color: #f8f9fa;
+    max-height: 100vh; /* Altura máxima igual à altura da tela verticalmente */
+    color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+#main-content {
+    padding: 20px;
+    margin-left: 0; /* Inicialmente, não há margem à esquerda */
+    transition: margin-left 0.3s; /* Adicione uma transição suave */
+}
+
+#sidebar.fixed {
+    position: fixed;
+}
+
+#main-content.fixed {
+    margin-left: 250px; /* Largura do sidebar quando estiver fixo */
+}
+
+@media screen and (min-width: 767px) {
+    #sidebar {
+        height: 100vh; /* Altura total da tela verticalmente */
+
+    }
+}
+
+/* Estilo para quando a tela é menor */
+@media screen and (max-width: 767px) {
+    #sidebar {
+        height: auto; /* Altura automática para se ajustar ao conteúdo */
+        width: 100%; /* Largura total da tela horizontalmente */
+    }
+}
+
+#toggleButton {
+    margin: 10px 0;
+    width: 40px;
+    height: 40px;
+    background-color: #2b66e4;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.cardtext{
+    margin: 2px;
 }
