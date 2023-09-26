@@ -14,16 +14,100 @@
             <div id="sidebar" class="col-md-3 col-lg-2 bg-dark sidebar">
                 <!-- Conteúdo da barra lateral -->
                 <h4>Person name</h4>
-                <h5>Rule</h5><br><br>
+                <h5>Repositorie: </h5>
+                <h5>Rule:</h5><br>
 
-                <div class="">
-                    <p>All rights reserved</p>
+                <div class="border-top">
+                    <br>
+                    <h4>Repositories</h4>
+                </div>
+
+                <p class="d-inline-flex gap-1">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      Search 🔎
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <div class="">    
+                            <table class="table table-bordered table-hover text-center">
+                              <thead>
+                                <tr>
+                                  <th>Repositories</th>
+                                  <th>Rule</th>
+                                  <th><a class="addRepositorie" href="">+</a></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Math Class</td>
+                                  <td>Teacher</td>
+                                  <td><a class="joinRepositorie" href="">→</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <div class="border-top">
+                    <br>
+                    <h4>Participants</h4>
+                </div>
+
+                  <p class="d-inline-flex gap-1">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExamplee" aria-expanded="false" aria-controls="collapseExample">
+                        Search 🔎
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapseExamplee">
+                    <div class="card card-body">
+                        <div class="">    
+                            <table class="table table-bordered table-hover text-center">
+                              <thead>
+                                <tr>
+                                  <th>Participants</th>
+                                  <th>Rule</th>
+                                  <th><a class="addRepositorie" href="">+</a></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>John</td>
+                                  <td>Student</td>
+                                  <td><a class="joinRepositorie" href="">-</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Maria</td>
+                                    <td>Student</td>
+                                    <td><a class="joinRepositorie" href="">-</a></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>Carlos</td>
+                                    <td>Professor</td>
+                                    <td><a class="joinRepositorie" href="">-</a></td>
+                                  </tr>
+
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                  </div>
+                  <br>
+
+                <div class="border-top">
+                    <br><p>All rights reserved</p>
                 </div>
             </div>
     
             <!-- Conteúdo principal -->
             <main class="col-md-9 ml-sm-auto col-lg-10 px-4 container">
                 <button id="toggleButton">→</button>
+                <div class="text-center name_repositorie_title">Name Repositorie</div>
                 <div class="search">
                     <input type="text" class="form-control">
                     <button type="button" class="btn btn-primary btn_add_task" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+</button>
@@ -64,9 +148,9 @@
 
                                         <div class="button-container">
                                             <button class="delete-button">Delete</button>
-                                            <button class="change-button" data-bs-toggle="modal" data-bs-target="#staticEdit">Change</button>
+                                            <button class="change-button" data-bs-toggle="modal" data-bs-target="#staticBackdropedit">Change</button>
     
-                                            <div class="modal fade" id="staticEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal fade" id="staticBackdropedit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                                     <div class="modal-content">
                                                         <div class="modal-header">

@@ -90,7 +90,7 @@ body{
 
 .sidenav {
     height: 100%; 
-    width: 160px; 
+    width: 250px; 
     position: fixed;
     z-index: 1; 
     top: 0;
@@ -147,7 +147,6 @@ body{
 @media screen and (min-width: 767px) {
     #sidebar {
         height: 100vh; /* Altura total da tela verticalmente */
-
     }
 }
 
@@ -173,4 +172,20 @@ body{
 
 .cardtext{
     margin: 2px;
+}
+
+.card{
+    padding: 2px;
+}
+
+.addRepositorie{
+    text-decoration: none;
+}
+
+.joinRepositorie{
+    text-decoration: none;
+}
+
+.name_repositorie_title{
+    font-size: large;
 }
