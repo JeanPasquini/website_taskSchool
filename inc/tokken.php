@@ -21,24 +21,7 @@ function generateToken($user_id) {
 }
 
 // Function to validate and decode a JWT token
-function validateToken($token) {
-    try {
-        $decoded = JWT::decode($token, $GLOBALS['secretKey'], array('HS256'));
 
-        // Check token expiration
-        $currentTime = time();
-        if ($decoded->exp < $currentTime) {
-            // Token has expired
-            return false;
-        }
-
-        // Token is valid
-        return $decoded;
-    } catch (Exception $e) {
-        // Token is invalid
-        return false;
-    }
-}
 
 /*
                         // Example usage:
@@ -54,5 +37,6 @@ function validateToken($token) {
                         } else {
                             echo "Token is invalid or expired.\n";
                         }
-*/
+
 ?>
+*/
